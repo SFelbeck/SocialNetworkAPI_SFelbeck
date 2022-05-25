@@ -2,7 +2,7 @@
 const connection = require('../config/connection');
 const { User, Thought, Reaction } = require('../models');
 
-const { genRandomIndex, getRandomUserName } = require('./data');
+const { genRandomIndex, getRandomUserName, getRandomEmail, getRandomThought, getRandomReaction } = require('./data');
 
 //import functions for seed data
 
@@ -17,9 +17,23 @@ connection.once('open', async () => {
     const thoughts =[];
     const reactions = [];
 
+    for (let i = 0; i < 10; i++){
+        const username = getRandomUserName();
+        const newUser = {
+            username: username,
+        };
+        users.push(newUser)
+    }
+
     const makeThought = (text) => {
         thougths.push({
 //idk what to put here
         })
     }
 })
+
+
+
+// await Reaction.collection.insertMany(reactions);
+
+// await Thought.collection.insertMany(thoughts);

@@ -28,6 +28,22 @@ const usernames = [
     'Zoinks',
 ];
 
+const emails = [
+    'ponies@farm.com',
+    'illuminati@conspiracy.gov',
+    'bonzai@tree.edu',
+    'socmediaperson@totesreal.com',
+    'random@email.com',
+    'runningoutofemails@help.com',
+    'email@placeholder.com',
+    'myrealemail@true.com',
+    'mafia@crime.org',
+    'boooom@dabomb.com',
+    'needmoreemails@neverends.com',
+    'loremipsum@programming.edu',
+    'lastemail@finally.com',
+];
+
 const thoughts = [
     'What should I have for lunch?',
     'Politics r complicated',
@@ -43,6 +59,15 @@ const thoughts = [
     'Honey, Where arrrrrre my paaants?!',
 ];
 
+const reactions = [
+    'like',
+    'favorite',
+    'subscribe',
+    'repost',
+    'laughed',
+    'loved',
+];
+
 const genRandomIndex = (arr) => Math.floor(Math.random() * arr.length);
 
 const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -50,7 +75,16 @@ const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 //there was extra randomization code on the activity but idk if i need it
 const getRandomUserName = () => `${getRandomArrItem(usernames)}`;
 
+const getRandomEmail = () => `${getRandomArrItem(emails)}`;
+
+const getRandomThought = () => `${getRandomArrItem(thoughts)}`;
+
+const getRandomReaction = () => `${getRandomArrItem(reactions)}`;
+
 module.exports = {
     genRandomIndex,
     getRandomUserName,
+    getRandomEmail,
+    getRandomThought,
+    getRandomReaction,
 };
